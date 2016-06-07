@@ -188,7 +188,7 @@
       "created" : "2016-05-13T15:29:56Z",
       "updated" : "2016-05-13T15:29:56Z"
     } ],
-    "type" : "REDIS CLUSTER",
+    "type" : "EC REDIS CLUSTER",
     "private" : false
   }
 }
