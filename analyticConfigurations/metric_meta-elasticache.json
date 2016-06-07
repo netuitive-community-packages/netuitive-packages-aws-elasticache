@@ -1,0 +1,74 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "METRIC_META",
+    "id" : null,
+    "packageId" : null,
+    "name" : "ElastiCache",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : null,
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "aws.elasticache.*(val|hits|misses|get|set|flush|connections|items|evictions|reclaimed|touch|fetched|moved|cmds)$",
+      "properties" : {
+        "STATISTIC" : "sum",
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : "aws.elasticache.*bytes.*",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "aws.elasticache.freeablememory",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "aws.elasticache.swapusage",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "aws.elasticache.cpuutilization",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent",
+          "utilization" : true
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "aws.elasticache.currconfig",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : "aws.elasticache.replicationlag",
+      "properties" : {
+        "tags" : {
+          "unit" : "seconds"
+        }
+      }
+    }, {
+      "match" : "aws.elasticache.saveinprogress",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    } ]
+  }
+}
