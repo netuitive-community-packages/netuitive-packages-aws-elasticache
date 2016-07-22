@@ -171,12 +171,12 @@
         "useElementNameContains" : "false",
         "useAllElementScopeTags" : "true",
         "element_id" : null,
-        "elementScopeTypes" : "[]",
+        "elementScopeTypes" : "[\"EC Memcached Cluster\"]",
         "metricLimit" : "10",
         "useAllMetricScopeTags" : "true",
         "metricUnit" : null,
         "metricAggs" : "[]",
-        "elementScopeIds" : "[\"d86aa394-a1d2-3331-bf20-a0149d7b96d4\"]",
+        "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
         "groupName" : null,
         "elementNameContains" : "",
@@ -190,9 +190,9 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-05-13T15:07:10Z",
-      "updated" : "2016-05-16T14:54:40Z"
+      "updated" : "2016-07-14T11:35:31Z"
     } ],
-    "type" : "EC MEMCACHED CLUSTER",
+    "type" : "MEMCACHED CLUSTER",
     "private" : false
   }
 }

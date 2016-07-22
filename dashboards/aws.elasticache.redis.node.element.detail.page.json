@@ -77,19 +77,24 @@
       "description" : null,
       "widgetType" : "multi-metric-time-series",
       "properties" : {
+        "visualization" : null,
         "showElementTotal" : "true",
         "selectedAttributes" : "[]",
         "elementScopeTags" : "[]",
         "useElementNameContains" : "false",
         "useAllElementScopeTags" : "true",
+        "element_id" : null,
         "elementScopeTypes" : "[\"EC Redis Node\"]",
         "metricLimit" : "10",
         "useAllMetricScopeTags" : "true",
+        "metricUnit" : null,
         "metricAggs" : "[]",
-        "elementScopeIds" : "[\"d4107f0b-170b-342a-8ca3-70e4f53e1318\"]",
+        "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
+        "groupName" : null,
         "elementNameContains" : "",
         "showHighest" : "true",
+        "metric_fqn" : null,
         "metricScopeTags" : "[]",
         "width" : "auto",
         "metrics" : "[{\"fqn\":\"aws.elasticache.networkbytesin\",\"aggFns\":[\"avg\"]},{\"fqn\":\"aws.elasticache.networkbytesout\",\"aggFns\":[\"avg\"]}]",
@@ -98,26 +103,31 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-05-13T16:09:32Z",
-      "updated" : "2016-05-13T16:09:32Z"
+      "updated" : "2016-07-14T11:40:05Z"
     }, {
       "id" : "0002ecd0-c248-477b-8235-b75be7bb889f",
       "name" : "Cache Hits and Misses",
       "description" : null,
       "widgetType" : "multi-metric-time-series",
       "properties" : {
+        "visualization" : null,
         "showElementTotal" : "true",
         "selectedAttributes" : "[]",
         "elementScopeTags" : "[]",
         "useElementNameContains" : "false",
         "useAllElementScopeTags" : "true",
+        "element_id" : null,
         "elementScopeTypes" : "[\"EC Redis Node\"]",
         "metricLimit" : "10",
         "useAllMetricScopeTags" : "true",
+        "metricUnit" : null,
         "metricAggs" : "[]",
-        "elementScopeIds" : "[\"d4107f0b-170b-342a-8ca3-70e4f53e1318\"]",
+        "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
+        "groupName" : null,
         "elementNameContains" : "",
         "showHighest" : "true",
+        "metric_fqn" : null,
         "metricScopeTags" : "[]",
         "width" : "auto",
         "metrics" : "[{\"fqn\":\"aws.elasticache.cachehits\",\"aggFns\":[\"avg\"]},{\"fqn\":\"aws.elasticache.cachemisses\",\"aggFns\":[\"avg\"]}]",
@@ -126,7 +136,7 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-05-13T16:05:15Z",
-      "updated" : "2016-05-13T16:05:15Z"
+      "updated" : "2016-07-14T11:40:14Z"
     }, {
       "id" : "f875fdfe-2824-4c4c-8f6e-6ebdcd306412",
       "name" : "Tags",
@@ -186,7 +196,7 @@
       "created" : "2016-05-13T15:59:06Z",
       "updated" : "2016-05-13T15:59:06Z"
     } ],
-    "type" : "EC REDIS NODE",
+    "type" : "REDIS NODE",
     "private" : false
   }
 }
