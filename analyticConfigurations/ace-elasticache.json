@@ -8,7 +8,8 @@
     "scope" : {
       "elementName" : null,
       "elementType" : null,
-      "elementTags" : null
+      "elementTags" : null,
+      "metricMatches" : null
     },
     "metrics" : [ {
       "match" : "aws.elasticache.cpuutilization",
