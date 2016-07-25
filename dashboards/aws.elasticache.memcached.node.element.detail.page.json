@@ -240,7 +240,7 @@
       "created" : "2016-05-13T15:22:26Z",
       "updated" : "2016-05-13T15:22:33Z"
     } ],
-    "type" : "MEMCACHED NODE",
+    "type" : "EC MEMCACHED NODE",
     "private" : false
   }
 }

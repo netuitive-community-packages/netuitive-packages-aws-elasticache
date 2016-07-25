@@ -192,7 +192,7 @@
       "created" : "2016-05-13T15:07:10Z",
       "updated" : "2016-07-14T11:35:31Z"
     } ],
-    "type" : "MEMCACHED CLUSTER",
+    "type" : "EC MEMCACHED CLUSTER",
     "private" : false
   }
 }
