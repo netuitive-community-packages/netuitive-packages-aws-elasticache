@@ -1,8 +1,12 @@
-#netuitive.packages.aws.elasticache 1.0.3
+#netuitive.packages.aws.elasticache 1.0.4
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.0.4
+
+* Updated package compatibilities.
 
 ###Version 1.0.3
 
