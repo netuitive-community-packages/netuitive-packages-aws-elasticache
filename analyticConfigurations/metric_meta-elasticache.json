@@ -70,6 +70,13 @@
           "unit" : "count"
         }
       }
+    }, {
+      "match" : "netuitive.elasticache.cachehitrate",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        }
+      }
     } ]
   }
 }

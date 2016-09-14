@@ -24,19 +24,31 @@
         "correlation" : true
       }
     }, {
+      "match" : "aws.elasticache.cache.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
       "match" : "aws.elasticache.currconnections",
       "properties" : {
         "baseline" : true,
         "correlation" : true
       }
     }, {
-      "match" : "aws.elasticache.evictions",
+      "match" : "aws.elasticache.newconnections",
       "properties" : {
         "baseline" : true,
         "correlation" : true
       }
     }, {
-      "match" : "aws.elasticache.cache.*",
+      "match" : "aws.elasticache.replicationbytes",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "aws.elasticache\\..*cmds",
       "properties" : {
         "baseline" : true,
         "correlation" : true
