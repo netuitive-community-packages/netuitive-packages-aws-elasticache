@@ -1,0 +1,23 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "COMPUTED_METRIC",
+    "id" : null,
+    "packageId" : null,
+    "name" : "ElastiCache",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : null,
+      "elementTags" : null,
+      "metricMatches" : null
+    },
+    "metrics" : [ {
+      "match" : "netuitive.elasticache.cachehitrate",
+      "properties" : {
+        "expression" : "(data['aws.elasticache.cachehits'].actual + data['aws.elasticache.cachemisses'].actual) == 0 ? 0 : data['aws.elasticache.cachehits'].actual / (data['aws.elasticache.cachehits'].actual + data['aws.elasticache.cachemisses'].actual)",
+        "fqn" : "netuitive.elasticache.cachehitrate",
+        "name" : "Cache Hit Rate"
+      }
+    } ]
+  }
+}
