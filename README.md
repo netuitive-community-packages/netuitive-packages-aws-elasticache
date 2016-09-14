@@ -1,8 +1,22 @@
-#netuitive.packages.aws.elasticache 1.0.4
+#netuitive.packages.aws.elasticache 2.0.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 2.0.0
+
+* Introduced a new computed metric for Redis: _netuitive.elasticache.cachehitratio_
+* Added a gauge for the Cache Hit Ratio on the element detail page.
+* Improved the correlation settings for Redis nodes.
+* Introduced new policies for Redis:
+ * AWS ElastiCache Redis - Elevated Command Executions
+ * AWS ElastiCache Redis - Elevated Network Activity
+ * AWS ElastiCache Redis - Elevated Number of New Connections
+ * AWS ElastiCache Redis - Elevated Replication Lag
+ * AWS ElastiCache Redis - Extended Period of Evictions
+ * AWS ElastiCache Redis - Extended Period of Swap Usage
+ * AWS ElastiCache Redis - Low Cache Hit Rate
 
 ###Version 1.0.4
 
