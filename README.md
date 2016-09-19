@@ -1,8 +1,12 @@
-#netuitive.packages.aws.elasticache 2.0.0
+#netuitive.packages.aws.elasticache 2.0.1
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 2.0.1
+
+* Changed the swap usage policy to look for out-of-band deviations as opposed to a static threshold.
 
 ###Version 2.0.0
 
