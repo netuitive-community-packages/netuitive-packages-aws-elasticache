@@ -71,11 +71,12 @@
         }
       }
     }, {
-      "match" : "netuitive.elasticache.cachehitrate",
+      "match" : "netuitive.aws.elasticache.cachehitrate",
       "properties" : {
         "tags" : {
           "unit" : "percent"
-        }
+        },
+        "validMax" : "100"
       }
     } ]
   }

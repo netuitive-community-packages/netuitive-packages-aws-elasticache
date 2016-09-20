@@ -24,12 +24,6 @@
         "correlation" : true
       }
     }, {
-      "match" : "aws.elasticache.cache.*",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
       "match" : "aws.elasticache.currconnections",
       "properties" : {
         "baseline" : true,
@@ -49,6 +43,12 @@
       }
     }, {
       "match" : "aws.elasticache\\..*cmds",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.elasticache.cachehitrate",
       "properties" : {
         "baseline" : true,
         "correlation" : true

@@ -12,10 +12,10 @@
       "metricMatches" : null
     },
     "metrics" : [ {
-      "match" : "netuitive.elasticache.cachehitrate",
+      "match" : "netuitive.aws.elasticache.cachehitrate",
       "properties" : {
         "expression" : "(data['aws.elasticache.cachehits'].actual + data['aws.elasticache.cachemisses'].actual) == 0 ? 0 : 100 * (data['aws.elasticache.cachehits'].actual / (data['aws.elasticache.cachehits'].actual + data['aws.elasticache.cachemisses'].actual))",
-        "fqn" : "netuitive.elasticache.cachehitrate",
+        "fqn" : "netuitive.aws.elasticache.cachehitrate",
         "name" : "Cache Hit Rate"
       }
     } ]

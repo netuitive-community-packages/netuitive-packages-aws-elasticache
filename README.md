@@ -1,8 +1,14 @@
-#netuitive.packages.aws.elasticache 2.0.1
+#netuitive.packages.aws.elasticache 2.0.2
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 2.0.2
+
+* Set validMax=100 for the Cache Hit Rate.
+* Changed the swap usage policy to only look for baseline deviations, since the underlying metric is not correlated.
+* Adjusted some of the baseline and correlation settings.
 
 ###Version 2.0.1
 
