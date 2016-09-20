@@ -22,16 +22,6 @@
       "level2" : null,
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "aws.elasticache.swapusage",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
     } ],
     "eventConditions" : [ ],
     "actions" : [ {
