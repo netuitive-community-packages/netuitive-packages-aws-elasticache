@@ -1,0 +1,38 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "AWS ElastiCache Memcached - Elevated Swap Usage",
+    "description" : "Swap usage on the Memcached Node has exceeded 50 MB.  It is recommended that you increase the value of the ConnectionOverhead parameter.",
+    "scope" : {
+      "elementName" : null,
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
+      "elementType" : "EC Memcached Node",
+      "elementTags" : { }
+    },
+    "duration" : 300,
+    "conditions" : [ {
+      "metric" : "aws.elasticache.swapusage",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "actual",
+      "operator" : ">",
+      "level" : 5.24288E7,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    } ],
+    "eventConditions" : [ ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 3
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "creatorEmail" : null,
+    "lastUpdated" : null
+  }
+}
