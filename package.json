@@ -1,6 +1,6 @@
 {
   "id" : "netuitive.packages.aws.elasticache",
-  "version" : "2.0.2",
+  "version" : "2.1.0",
   "manifest" : {
     "name" : "Netuitive Packages AWS ElastiCache",
     "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of AWS ElastiCache resources.",
@@ -18,6 +18,24 @@
   },
   "policies" : [ {
     "data" : {
+      "file" : "policies/aws.elasticache.memcached.-.cpu.threshold.exceeded.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/aws.elasticache.memcached.-.elevated.cpu.utilization.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/aws.elasticache.memcached.-.elevated.swap.usage.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
       "file" : "policies/aws.elasticache.redis.-.elevated.command.executions.json",
       "encoding" : "application/json",
       "content" : null
@@ -25,6 +43,12 @@
   }, {
     "data" : {
       "file" : "policies/aws.elasticache.redis.-.elevated.network.activity.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/aws.elasticache.redis.-.elevated.cpu.utilization.json",
       "encoding" : "application/json",
       "content" : null
     }

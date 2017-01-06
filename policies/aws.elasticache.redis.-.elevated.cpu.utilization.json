@@ -1,0 +1,48 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "AWS ElastiCache Redis - Elevated CPU Utilization",
+    "description" : "CPU utilization for the Redis Node has been higher than expected for at least 30 minutes.",
+    "scope" : {
+      "elementName" : null,
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
+      "elementType" : "EC Redis Node",
+      "elementTags" : { }
+    },
+    "duration" : 1800,
+    "conditions" : [ {
+      "metric" : "aws.elasticache.cpuutilization",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "aws.elasticache.cpuutilization",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "actual",
+      "operator" : ">",
+      "level" : 30.0,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    } ],
+    "eventConditions" : [ ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "creatorEmail" : null,
+    "lastUpdated" : null
+  }
+}
