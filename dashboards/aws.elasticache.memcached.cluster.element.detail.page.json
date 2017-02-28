@@ -9,7 +9,8 @@
       "timeRangeDuration" : "3600",
       "density" : "normal",
       "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+      "wrap" : "true",
+      "gridstackContents" : "[{\"id\":\"4f5af215-10d0-496b-87e1-2164a356d54d\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"c30f1604-7654-46f8-b65c-dfc7d351ec76\",\"x\":8,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"3d9082c0-9b8c-40ed-8c6b-0bb7ead89f10\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"d83feec1-5cd8-4534-8624-56c725c2b6ed\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"58fd5974-ec10-4ff8-ad22-6d629f42ea21\",\"x\":4,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"b6509c65-48f0-4b67-8b0c-fd027ed13e0e\",\"x\":0,\"y\":9,\"width\":4,\"height\":9}]"
     },
     "tenantId" : null,
     "userId" : null,

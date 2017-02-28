@@ -1,12 +1,15 @@
-#netuitive.packages.aws.elasticache 2.1.0
+#netuitive.packages.aws.elasticache 2.2.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
 ##Release History
 
+###Version 2.2.0
+ * Updated dashboard layouts for gridstack
+
 ###Version 2.1.0
 
-* Added the following new policies:
+ * Added the following new policies:
  * AWS ElastiCache Memcached - CPU Threshold Exceeded
  * AWS ElastiCache Memcached - Elevated CPU Utilization
  * AWS ElastiCache Memcached - Elevated Swap Usage
