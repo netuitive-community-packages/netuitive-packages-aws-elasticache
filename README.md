@@ -1,10 +1,15 @@
-# netuitive.packages.aws.elasticache 2.2.0
+# netuitive.packages.aws.elasticache
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
 ## Release History
 
+### Version next
+
+* Bugfix - Converts to elementTypes array in policies
+
 ### Version 2.2.0
+
  * Updated dashboard layouts for gridstack
 
 ### Version 2.1.0
