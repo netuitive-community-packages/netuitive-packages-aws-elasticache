@@ -7,7 +7,7 @@
     "name" : "ElastiCache",
     "scope" : {
       "elementName" : null,
-      "elementTypes : [],
+      "elementType" : null,
       "elementTags" : null,
       "metricMatches" : null
     },

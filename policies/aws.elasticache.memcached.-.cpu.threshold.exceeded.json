@@ -8,7 +8,7 @@
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],
-      "elementTypes : [ "EC Memcached Node" ],
+      "elementTypes" : ["EC Memcached Node"],
       "elementTags" : { }
     },
     "duration" : 300,
