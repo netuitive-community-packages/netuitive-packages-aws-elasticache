@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version 2.3.1
+
+* Updated policy description for AWS ElastiCache Memcached - Elevated Swap Usage
+
 ### Version 2.3.0
 
 * Updated element details dashboard layout
