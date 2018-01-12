@@ -13,7 +13,7 @@
     },
     "duration" : 1800,
     "conditions" : [ {
-      "metric" : "netuitive.elasticache.cachehitrate",
+      "metric" : "netuitive.aws.elasticache.cachehitrate",
       "wildcard" : null,
       "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
@@ -23,7 +23,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "netuitive.elasticache.cachehitrate",
+      "metric" : "netuitive.aws.elasticache.cachehitrate",
       "wildcard" : null,
       "metricScopeTags" : { },
       "analytic" : "contextualDeviation",

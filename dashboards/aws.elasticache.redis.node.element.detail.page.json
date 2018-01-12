@@ -106,7 +106,7 @@
         "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
         "showHighest" : "true",
-        "metric_fqn" : "netuitive.elasticache.cachehitrate",
+        "metric_fqn" : "netuitive.aws.elasticache.cachehitrate",
         "metricScopeTags" : "[]",
         "width" : "auto",
         "metrics" : "[]",
