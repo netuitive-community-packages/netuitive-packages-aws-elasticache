@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version next
+
+* Add a cache utilization computed metric for both Redis and Memcached
+
 ### Version 2.3.2
 
 * Corrected the ElastiCache cache hit rate metric FQN for element details dashboard and low cache hit rate policy

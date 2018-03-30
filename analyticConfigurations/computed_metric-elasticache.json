@@ -12,11 +12,18 @@
       "metricMatches" : null
     },
     "metrics" : [ {
-      "match" : "netuitive.aws.elasticache.cachehitrate",
-      "properties" : {
-        "expression" : "(data['aws.elasticache.cachehits'].actual + data['aws.elasticache.cachemisses'].actual) == 0 ? 0 : 100 * (data['aws.elasticache.cachehits'].actual / (data['aws.elasticache.cachehits'].actual + data['aws.elasticache.cachemisses'].actual))",
-        "fqn" : "netuitive.aws.elasticache.cachehitrate",
-        "name" : "Cache Hit Rate"
+      "match": "netuitive.aws.elasticache.cachehitrate",
+      "properties": {
+        "expression": "(data['aws.elasticache.cachehits'].actual + data['aws.elasticache.cachemisses'].actual) == 0 ? 0 : 100 * (data['aws.elasticache.cachehits'].actual / (data['aws.elasticache.cachehits'].actual + data['aws.elasticache.cachemisses'].actual))",
+        "fqn": "netuitive.aws.elasticache.cachehitrate",
+        "name": "Cache Hit Rate"
+      }
+    }, {
+      "match": "netuitive.aws.elasticache.utilization",
+      "properties": {
+        "expression": "100 * ((data['aws.elasticache.bytesusedforcache'].actual != undefined ? data['aws.elasticache.bytesusedforcache'].actual : data['aws.elasticache.bytesusedforcacheitems'].actual) / ((data['aws.elasticache.bytesusedforcache'].actual != undefined ? data['aws.elasticache.bytesusedforcache'].actual : data['aws.elasticache.bytesusedforcacheitems'].actual) + data['aws.elasticache.freeablememory'].actual)",
+        "fqn": "netuitive.aws.elasticache.utilization",
+        "name": "Cache Utilization"
       }
     } ]
   }
