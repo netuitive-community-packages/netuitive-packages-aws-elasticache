@@ -18,7 +18,7 @@
       "metricScopeTags" : { },
       "analytic" : "actual",
       "operator" : ">",
-      "level" : 5.24288E7,
+      "level" : 52428800,
       "level2" : null,
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
