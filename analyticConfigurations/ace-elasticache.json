@@ -53,6 +53,12 @@
         "baseline" : true,
         "correlation" : true
       }
+    }, {
+      "match": "netuitive.aws.elasticache.memoryutilization",
+      "properties": {
+        "baseline": true,
+        "correlation": true
+      }
     } ]
   }
 }
