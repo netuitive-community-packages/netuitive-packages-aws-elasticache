@@ -79,7 +79,7 @@
         "validMax": "100"
       }
     }, {
-      "match": "netuitive.aws.elasticache.utilization",
+      "match": "netuitive.aws.elasticache.memoryutilization",
       "properties": {
         "tags": {
           "unit": "percent",
