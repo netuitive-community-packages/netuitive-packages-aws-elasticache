@@ -71,12 +71,22 @@
         }
       }
     }, {
-      "match" : "netuitive.aws.elasticache.cachehitrate",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
+      "match": "netuitive.aws.elasticache.cachehitrate",
+      "properties": {
+        "tags": {
+          "unit": "percent"
         },
-        "validMax" : "100"
+        "validMax": "100"
+      }
+    }, {
+      "match": "netuitive.aws.elasticache.utilization",
+      "properties": {
+        "tags": {
+          "unit": "percent",
+          "utilization": true
+        },
+        "validMin": "0",
+        "validMax": "100"
       }
     } ]
   }
