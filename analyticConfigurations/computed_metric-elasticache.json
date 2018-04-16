@@ -9,7 +9,7 @@
       "elementName" : null,
       "elementType" : null,
       "elementTags" : null,
-      "metricMatches" : null
+      "metricMatches" : "aws.elasticache.freeablememory"
     },
     "metrics" : [ {
       "match": "netuitive.aws.elasticache.cachehitrate",

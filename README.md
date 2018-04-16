@@ -6,6 +6,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+* Reduce the computed metric scope to only ElastiCache type elements
 * Add a cache utilization computed metric for both Redis and Memcached
 * Fixed number format in AWS ElastiCache Memcached - Elevated Swap Usage to stop breaking the package validators
 * Adjusted build to use metricly-cli for validation
