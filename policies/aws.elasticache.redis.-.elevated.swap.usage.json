@@ -1,38 +1,25 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "AWS ElastiCache Redis - Elevated Swap Usage",
-    "description" : "Swap usage on the Redis Node has been higher than expected for at least 30 minutes.  Extended swapping indicates a low physical memory condition, and can lead to performance degradation. ",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "EC Redis Node",
-      "elementTags" : { }
-    },
-    "duration" : 1800,
-    "conditions" : [ {
-      "metric" : "aws.elasticache.swapusage",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "metric": "aws.elasticache.swapusage",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "Swap usage on the Redis Node has been higher than expected for at least 30 minutes.  Extended swapping indicates a low physical memory condition, and can lead to performance degradation. ",
+    "duration": 1800,
+    "enabled": true,
+    "name": "AWS ElastiCache Redis - Elevated Swap Usage",
+    "scope": {
+      "elementType": "EC Redis Node"
+    }
   }
 }

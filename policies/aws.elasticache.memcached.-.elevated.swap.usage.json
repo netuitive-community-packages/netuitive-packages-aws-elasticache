@@ -1,38 +1,26 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "AWS ElastiCache Memcached - Elevated Swap Usage",
-    "description" : "Swap usage on the Memcached Node has exceeded 50 MB. This metric should not exceed 50 MB. If it does, we recommend that you increase the ConnectionOverhead parameter value based on Amazon's monitoring best practices: http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/CacheMetrics.WhichShouldIMonitor.html",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "EC Memcached Node",
-      "elementTags" : { }
-    },
-    "duration" : 300,
-    "conditions" : [ {
-      "metric" : "aws.elasticache.swapusage",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : ">",
-      "level" : 52428800,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 3
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 3,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 52428800,
+        "metric": "aws.elasticache.swapusage",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "Swap usage on the Memcached Node has exceeded 50 MB. This metric should not exceed 50 MB. If it does, we recommend that you increase the ConnectionOverhead parameter value based on Amazon's monitoring best practices: http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/CacheMetrics.WhichShouldIMonitor.html",
+    "duration": 300,
+    "enabled": true,
+    "name": "AWS ElastiCache Memcached - Elevated Swap Usage",
+    "scope": {
+      "elementType": "EC Memcached Node"
+    }
   }
 }

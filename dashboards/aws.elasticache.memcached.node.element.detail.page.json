@@ -1,212 +1,129 @@
 {
-  "dashboard" : {
-    "name" : "AWS ElastiCache Memcached Node Element Detail Page",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "integrationType" : null,
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"ecdc7db7-aeef-4ada-9bba-5c1bfd663985\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"9820fdaa-00ec-499f-b7c7-68ec5ab2c55a\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"f1bea970-3643-45c0-9b8e-dd13550e4860\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"f724d515-648b-4bb0-8902-99872b096c96\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"ea5c5bf4-2b31-4954-8587-c673d84b121b\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"7893a56f-3aff-45d3-bf21-c0c4f2a2bb88\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"05a11a07-f4fb-417e-934b-366e5f2aa0aa\",\"x\":0,\"y\":27,\"width\":12,\"height\":8}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "AWS ElastiCache Memcached Node Element Detail Page",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"ecdc7db7-aeef-4ada-9bba-5c1bfd663985\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"9820fdaa-00ec-499f-b7c7-68ec5ab2c55a\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"f1bea970-3643-45c0-9b8e-dd13550e4860\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"f724d515-648b-4bb0-8902-99872b096c96\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"ea5c5bf4-2b31-4954-8587-c673d84b121b\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"7893a56f-3aff-45d3-bf21-c0c4f2a2bb88\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"05a11a07-f4fb-417e-934b-366e5f2aa0aa\",\"x\":0,\"y\":27,\"width\":12,\"height\":8}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "ecdc7db7-aeef-4ada-9bba-5c1bfd663985",
-      "name" : "CPU Utilization",
-      "description" : null,
-      "widgetType" : "metric-status",
-      "properties" : {
-        "visualization" : "gauge",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "aws.elasticache.cpuutilization",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
+    "type": "EC MEMCACHED NODE",
+    "widgets": [
+      {
+        "id": "ecdc7db7-aeef-4ada-9bba-5c1bfd663985",
+        "name": "CPU Utilization",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "aws.elasticache.cpuutilization",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "auto"
+        },
+        "widgetType": "metric-status"
+      },
+      {
+        "id": "9820fdaa-00ec-499f-b7c7-68ec5ab2c55a",
+        "name": "Tags",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "element-tags"
+      },
+      {
+        "id": "f1bea970-3643-45c0-9b8e-dd13550e4860",
+        "name": "Cache Hits",
+        "properties": {
+          "elementScopeTypes": "[\"EC Memcached Node\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"aws.elasticache.cashits\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.decrhits\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.deletehits\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.gethits\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.incrhits\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.touchhits\",\"aggFns\":[\"avg\"]}]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "false",
+          "width": "auto"
+        },
+        "widgetType": "multi-metric-time-series"
+      },
+      {
+        "id": "f724d515-648b-4bb0-8902-99872b096c96",
+        "name": "Bytes Read and Written",
+        "properties": {
+          "elementScopeTypes": "[\"EC Memcached Node\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"aws.elasticache.bytesreadintomemcached\",\"aggFns\":[]},{\"fqn\":\"aws.elasticache.byteswrittenoutfrommemcached\",\"aggFns\":[]}]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "false",
+          "width": "auto"
+        },
+        "widgetType": "stacked-area"
+      },
+      {
+        "id": "ea5c5bf4-2b31-4954-8587-c673d84b121b",
+        "name": "Cache Misses",
+        "properties": {
+          "elementScopeTypes": "[\"EC Memcached Node\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"aws.elasticache.casmisses\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.decrmisses\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.deletemisses\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.getmisses\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.incrmisses\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.touchmisses\",\"aggFns\":[\"avg\"]}]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "false",
+          "width": "auto"
+        },
+        "widgetType": "multi-metric-time-series"
+      },
+      {
+        "id": "7893a56f-3aff-45d3-bf21-c0c4f2a2bb88",
+        "name": "Attributes",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-attributes"
+      },
+      {
+        "id": "05a11a07-f4fb-417e-934b-366e5f2aa0aa",
+        "name": "Events",
+        "properties": {
+          "elementScopeTypes": "[\"EC Memcached Node\"]",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "event-ticker"
       }
-    }, {
-      "id" : "9820fdaa-00ec-499f-b7c7-68ec5ab2c55a",
-      "name" : "Tags",
-      "description" : null,
-      "widgetType" : "element-tags",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "f1bea970-3643-45c0-9b8e-dd13550e4860",
-      "name" : "Cache Hits",
-      "description" : null,
-      "widgetType" : "multi-metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "false",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"EC Memcached Node\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : "",
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[{\"fqn\":\"aws.elasticache.cashits\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.decrhits\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.deletehits\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.gethits\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.incrhits\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.touchhits\",\"aggFns\":[\"avg\"]}]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "f724d515-648b-4bb0-8902-99872b096c96",
-      "name" : "Bytes Read and Written",
-      "description" : null,
-      "widgetType" : "stacked-area",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "false",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"EC Memcached Node\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : "",
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[{\"fqn\":\"aws.elasticache.bytesreadintomemcached\",\"aggFns\":[]},{\"fqn\":\"aws.elasticache.byteswrittenoutfrommemcached\",\"aggFns\":[]}]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "ea5c5bf4-2b31-4954-8587-c673d84b121b",
-      "name" : "Cache Misses",
-      "description" : null,
-      "widgetType" : "multi-metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "false",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"EC Memcached Node\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : "",
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[{\"fqn\":\"aws.elasticache.casmisses\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.decrmisses\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.deletemisses\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.getmisses\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.incrmisses\",\"aggFns\":[\"sum\"]},{\"fqn\":\"aws.elasticache.touchmisses\",\"aggFns\":[\"avg\"]}]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "7893a56f-3aff-45d3-bf21-c0c4f2a2bb88",
-      "name" : "Attributes",
-      "description" : null,
-      "widgetType" : "element-attributes",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "05a11a07-f4fb-417e-934b-366e5f2aa0aa",
-      "name" : "Events",
-      "description" : null,
-      "widgetType" : "event-ticker",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"EC Memcached Node\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    } ],
-    "type" : "EC MEMCACHED NODE",
-    "private" : false
+    ]
   }
 }

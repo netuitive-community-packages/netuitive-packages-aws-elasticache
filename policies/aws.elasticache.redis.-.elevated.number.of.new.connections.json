@@ -1,48 +1,30 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "AWS ElastiCache Redis - Elevated Number of New Connections",
-    "description" : "The number of new connections being opened to the Redis node has been higher than expected for at least 30 minutes.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "EC Redis Node",
-      "elementTags" : { }
-    },
-    "duration" : 1800,
-    "conditions" : [ {
-      "metric" : "aws.elasticache.newconnections",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "aws.elasticache.newconnections",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "metric": "aws.elasticache.newconnections",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "aws.elasticache.newconnections",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "The number of new connections being opened to the Redis node has been higher than expected for at least 30 minutes.",
+    "duration": 1800,
+    "enabled": true,
+    "name": "AWS ElastiCache Redis - Elevated Number of New Connections",
+    "scope": {
+      "elementType": "EC Redis Node"
+    }
   }
 }

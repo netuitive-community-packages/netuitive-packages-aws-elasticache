@@ -1,64 +1,64 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "ACE",
-    "id" : null,
-    "packageId" : null,
-    "name" : "ElastiCache",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : null,
-      "elementTags" : null,
-      "metricMatches" : null
-    },
-    "metrics" : [ {
-      "match" : "aws.elasticache.cpuutilization",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "aws.elasticache.cpuutilization",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "aws.elasticache.network.*",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "aws.elasticache.currconnections",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "aws.elasticache.newconnections",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "aws.elasticache.replicationbytes",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "aws.elasticache\\..*cmds",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "netuitive.aws.elasticache.cachehitrate",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "netuitive.aws.elasticache.memoryutilization",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
       }
-    }, {
-      "match" : "aws.elasticache.network.*",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "aws.elasticache.currconnections",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "aws.elasticache.newconnections",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "aws.elasticache.replicationbytes",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "aws.elasticache\\..*cmds",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "netuitive.aws.elasticache.cachehitrate",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match": "netuitive.aws.elasticache.memoryutilization",
-      "properties": {
-        "baseline": true,
-        "correlation": true
-      }
-    } ]
+    ],
+    "name": "ElastiCache",
+    "type": "ACE"
   }
 }
