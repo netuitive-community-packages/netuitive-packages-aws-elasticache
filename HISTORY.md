@@ -2,6 +2,8 @@
 
 ### Version next
 
+* Convert computed metrics to new format
+
 ### Version 2.4.0
 
 * Reduce the computed metric scope to only ElastiCache type elements
