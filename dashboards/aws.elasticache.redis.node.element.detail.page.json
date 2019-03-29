@@ -1,169 +1,112 @@
 {
-  "dashboard" : {
-    "name" : "AWS ElastiCache Redis Node Element Detail Page",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "integrationType" : null,
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"e8d228bc-02cc-4651-b1b5-63fd6a740b65\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"9c8697d7-87b7-4269-8989-4df17fc2192a\",\"x\":0,\"y\":18,\"width\":12,\"height\":9},{\"id\":\"e2a6b808-741f-42bf-9e66-904b2b77bd23\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"b1b9322e-5947-4e69-af0f-af33d00befb9\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"f875fdfe-2824-4c4c-8f6e-6ebdcd306412\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"0eccff9d-375b-4640-8a4a-fe1f0493ffd5\",\"x\":4,\"y\":0,\"width\":4,\"height\":9}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "AWS ElastiCache Redis Node Element Detail Page",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"e8d228bc-02cc-4651-b1b5-63fd6a740b65\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"9c8697d7-87b7-4269-8989-4df17fc2192a\",\"x\":0,\"y\":18,\"width\":12,\"height\":9},{\"id\":\"e2a6b808-741f-42bf-9e66-904b2b77bd23\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"b1b9322e-5947-4e69-af0f-af33d00befb9\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"f875fdfe-2824-4c4c-8f6e-6ebdcd306412\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"0eccff9d-375b-4640-8a4a-fe1f0493ffd5\",\"x\":4,\"y\":0,\"width\":4,\"height\":9}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "e8d228bc-02cc-4651-b1b5-63fd6a740b65",
-      "name" : "Attributes",
-      "description" : null,
-      "widgetType" : "element-attributes",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
+    "type": "EC REDIS NODE",
+    "widgets": [
+      {
+        "id": "e8d228bc-02cc-4651-b1b5-63fd6a740b65",
+        "name": "Attributes",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-attributes"
+      },
+      {
+        "id": "9c8697d7-87b7-4269-8989-4df17fc2192a",
+        "name": "Events",
+        "properties": {
+          "elementScopeTypes": "[\"EC Redis Node\"]",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "event-ticker"
+      },
+      {
+        "id": "e2a6b808-741f-42bf-9e66-904b2b77bd23",
+        "name": "Network Bytes In and Out",
+        "properties": {
+          "elementScopeTypes": "[\"EC Redis Node\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"aws.elasticache.networkbytesin\",\"aggFns\":[\"avg\"]},{\"fqn\":\"aws.elasticache.networkbytesout\",\"aggFns\":[\"avg\"]}]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "false",
+          "width": "auto"
+        },
+        "widgetType": "multi-metric-time-series"
+      },
+      {
+        "id": "b1b9322e-5947-4e69-af0f-af33d00befb9",
+        "name": "Cache Hit Rate",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.aws.elasticache.cachehitrate",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "auto"
+        },
+        "widgetType": "metric-status"
+      },
+      {
+        "id": "f875fdfe-2824-4c4c-8f6e-6ebdcd306412",
+        "name": "Tags",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-tags"
+      },
+      {
+        "id": "0eccff9d-375b-4640-8a4a-fe1f0493ffd5",
+        "name": "CPU",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "aws.elasticache.cpuutilization",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "auto"
+        },
+        "widgetType": "metric-status"
       }
-    }, {
-      "id" : "9c8697d7-87b7-4269-8989-4df17fc2192a",
-      "name" : "Events",
-      "description" : null,
-      "widgetType" : "event-ticker",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"EC Redis Node\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "e2a6b808-741f-42bf-9e66-904b2b77bd23",
-      "name" : "Network Bytes In and Out",
-      "description" : null,
-      "widgetType" : "multi-metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "false",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"EC Redis Node\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : "",
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[{\"fqn\":\"aws.elasticache.networkbytesin\",\"aggFns\":[\"avg\"]},{\"fqn\":\"aws.elasticache.networkbytesout\",\"aggFns\":[\"avg\"]}]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "b1b9322e-5947-4e69-af0f-af33d00befb9",
-      "name" : "Cache Hit Rate",
-      "description" : null,
-      "widgetType" : "metric-status",
-      "properties" : {
-        "visualization" : "gauge",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.aws.elasticache.cachehitrate",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "f875fdfe-2824-4c4c-8f6e-6ebdcd306412",
-      "name" : "Tags",
-      "description" : null,
-      "widgetType" : "element-tags",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "0eccff9d-375b-4640-8a4a-fe1f0493ffd5",
-      "name" : "CPU",
-      "description" : null,
-      "widgetType" : "metric-status",
-      "properties" : {
-        "visualization" : "gauge",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "aws.elasticache.cpuutilization",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    } ],
-    "type" : "EC REDIS NODE",
-    "private" : false
+    ]
   }
 }

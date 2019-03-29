@@ -1,93 +1,95 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "ElastiCache",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : null,
-      "elementTags" : null,
-      "metricMatches" : null
-    },
-    "metrics" : [ {
-      "match" : "aws.elasticache.*(val|hits|misses|get|set|flush|connections|items|evictions|reclaimed|touch|fetched|moved|cmds)$",
-      "properties" : {
-        "STATISTIC" : "sum",
-        "tags" : {
-          "unit" : "count"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "aws.elasticache.*(val|hits|misses|get|set|flush|connections|items|evictions|reclaimed|touch|fetched|moved|cmds)$",
+        "properties": {
+          "STATISTIC": "sum",
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticache.*bytes.*",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticache.freeablememory",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticache.swapusage",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticache.cpuutilization",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "aws.elasticache.currconfig",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticache.replicationlag",
+        "properties": {
+          "tags": {
+            "unit": "seconds"
+          }
+        }
+      },
+      {
+        "match": "aws.elasticache.saveinprogress",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "netuitive.aws.elasticache.cachehitrate",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": "100"
+        }
+      },
+      {
+        "match": "netuitive.aws.elasticache.memoryutilization",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": "100",
+          "validMin": "0"
         }
       }
-    }, {
-      "match" : "aws.elasticache.*bytes.*",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws.elasticache.freeablememory",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws.elasticache.swapusage",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws.elasticache.cpuutilization",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent",
-          "utilization" : true
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "aws.elasticache.currconfig",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "aws.elasticache.replicationlag",
-      "properties" : {
-        "tags" : {
-          "unit" : "seconds"
-        }
-      }
-    }, {
-      "match" : "aws.elasticache.saveinprogress",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match": "netuitive.aws.elasticache.cachehitrate",
-      "properties": {
-        "tags": {
-          "unit": "percent"
-        },
-        "validMax": "100"
-      }
-    }, {
-      "match": "netuitive.aws.elasticache.memoryutilization",
-      "properties": {
-        "tags": {
-          "unit": "percent",
-          "utilization": true
-        },
-        "validMin": "0",
-        "validMax": "100"
-      }
-    } ]
+    ],
+    "name": "ElastiCache",
+    "type": "METRIC_META"
   }
 }
