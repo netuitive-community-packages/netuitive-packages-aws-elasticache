@@ -25,7 +25,9 @@
     "enabled": true,
     "name": "AWS ElastiCache Redis - Elevated CPU Utilization",
     "scope": {
-      "elementType": "EC Redis Node"
+      "elementTypes": [
+        "EC Redis Node"
+      ]
     }
   }
 }

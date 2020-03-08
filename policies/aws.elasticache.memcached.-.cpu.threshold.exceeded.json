@@ -20,7 +20,9 @@
     "enabled": true,
     "name": "AWS ElastiCache Memcached - CPU Threshold Exceeded",
     "scope": {
-      "elementType": "EC Memcached Node"
+      "elementTypes": [
+        "EC Memcached Node"
+      ]
     }
   }
 }

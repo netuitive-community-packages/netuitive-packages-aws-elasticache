@@ -19,7 +19,9 @@
     "enabled": true,
     "name": "AWS ElastiCache Redis - Elevated Replication Lag",
     "scope": {
-      "elementType": "EC Redis Node"
+      "elementTypes": [
+        "EC Redis Node"
+      ]
     }
   }
 }
