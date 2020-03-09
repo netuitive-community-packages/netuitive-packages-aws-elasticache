@@ -25,7 +25,9 @@
     "enabled": true,
     "name": "AWS ElastiCache Memcached - Elevated CPU Utilization",
     "scope": {
-      "elementType": "EC Memcached Node"
+      "elementTypes": [
+        "EC Memcached Node"
+      ]
     }
   }
 }

@@ -24,7 +24,9 @@
     "enabled": true,
     "name": "AWS ElastiCache Redis - Elevated Command Executions",
     "scope": {
-      "elementType": "EC Redis Node"
+      "elementTypes": [
+        "EC Redis Node"
+      ]
     }
   }
 }

@@ -24,7 +24,9 @@
     "enabled": true,
     "name": "AWS ElastiCache Redis - Elevated Number of New Connections",
     "scope": {
-      "elementType": "EC Redis Node"
+      "elementTypes": [
+        "EC Redis Node"
+      ]
     }
   }
 }

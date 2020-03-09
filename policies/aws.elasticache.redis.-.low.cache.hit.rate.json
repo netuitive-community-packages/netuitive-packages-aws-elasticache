@@ -24,7 +24,9 @@
     "enabled": true,
     "name": "AWS ElastiCache Redis - Low Cache Hit Rate",
     "scope": {
-      "elementType": "EC Redis Node"
+      "elementTypes": [
+        "EC Redis Node"
+      ]
     }
   }
 }

@@ -20,7 +20,9 @@
     "enabled": true,
     "name": "AWS ElastiCache Memcached - Elevated Swap Usage",
     "scope": {
-      "elementType": "EC Memcached Node"
+      "elementTypes": [
+        "EC Memcached Node"
+      ]
     }
   }
 }
